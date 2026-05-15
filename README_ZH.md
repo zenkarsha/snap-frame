@@ -1,49 +1,48 @@
-English | **[中文](README_ZH.md)**
+**[English](README.md)** | 中文
 
 # Snap Frame
 
-macOS app for turning screenshots into polished framed images. Drop in a screenshot, choose a background, tune the spacing, radius, and shadow, then export or copy a ready-to-share PNG.
+Snap Frame 是一款 macOS App，可將截圖轉成帶有精緻外框的圖片。放入截圖後，選擇背景、調整間距、圓角與陰影，就能匯出或複製一張可直接分享的 PNG。
 
 ![Snap Frame](screenshot.png)
 
-## Features
+## 功能
 
-- Drag and drop a screenshot or choose one with the file picker
-- Supports image files and image data from the pasteboard/drop system
-- Includes gradient, solid color, and macOS desktop background presets
-- Supports custom solid color and custom two-color gradient backgrounds
-- Provides Auto, 3:2, 4:3, 16:9, and 1:1 output ratios
-- Automatically detects the screenshot edge color for the inset frame
-- Lets you adjust outer padding, inset padding, corner radius, and shadow
-- Exports the final composition as a PNG image
-- Copies the rendered PNG to the pasteboard with `Command-C`
-- Supports `Command-S` for export and `Command-R` to reset settings
+- 可拖放截圖，或透過檔案選擇器選取圖片
+- 支援圖片檔案，以及來自剪貼簿或拖放系統的圖片資料
+- 內建漸層、純色與 macOS 桌面背景預設
+- 支援自訂純色背景與雙色漸層背景
+- 提供 Auto、3:2、4:3、16:9 與 1:1 輸出比例
+- 自動偵測截圖邊緣顏色，作為內框顏色
+- 可調整外側留白、內框留白、圓角與陰影
+- 使用 `Cmd + C` 將渲染後的 PNG 複製到剪貼簿
+- 支援 `Cmd + S` 匯出，以及 `Cmd + R` 重設設定
 
-## Requirements
+## 系統需求
 
 - macOS 15.5+
 - Xcode 16+
 - Swift 5
 
-The project has no third-party package dependencies. Clone it and open it in Xcode.
+此專案沒有第三方套件相依。Clone 專案後，用 Xcode 開啟即可。
 
-## Download
+## 下載
 
-Download the latest release from:
+從以下位置下載最新版本：
 
 [https://github.com/zenkarsha/snap-frame/releases](https://github.com/zenkarsha/snap-frame/releases)
 
-After installing the app, macOS may block it on first launch. If that happens, go to `System Settings > Privacy & Security` and click `Open Anyway`.
+安裝 App 後，macOS 可能會在第一次啟動時阻擋它。如果發生這種情況，請前往 `系統設定 > 隱私權與安全性`，然後點擊 `強制打開`。
 
-## Run
+## 執行
 
-Using Xcode:
+使用 Xcode：
 
-1. Open `Snap Frame/Snap Frame.xcodeproj`
-2. Select the `Snap Frame` scheme
-3. Run the app
+1. 開啟 `Snap Frame/Snap Frame.xcodeproj`
+2. 選擇 `Snap Frame` scheme
+3. 執行 App
 
-Using the command line:
+使用命令列：
 
 ```bash
 xcodebuild \
@@ -53,7 +52,7 @@ xcodebuild \
   build
 ```
 
-## Test
+## 測試
 
 ```bash
 xcodebuild \
@@ -64,21 +63,21 @@ xcodebuild \
   -derivedDataPath ".deriveddata/test"
 ```
 
-## Local Install
+## 本機安裝
 
-The repo includes an install script that will:
+此 repo 包含一支安裝腳本，會執行以下動作：
 
-- Build the app with the `Release` configuration
-- Stop the currently running `Snap Frame` process if needed
-- Copy the `.app` bundle to `/Applications`
+- 使用 `Release` configuration 建置 App
+- 視需要停止目前正在執行的 `Snap Frame` process
+- 將 `.app` bundle 複製到 `/Applications`
 
-Command:
+指令：
 
 ```bash
 ./scripts/install_local.sh
 ```
 
-## Project Structure
+## 專案結構
 
 ```text
 .
@@ -110,6 +109,6 @@ Command:
 └── scripts/
 ```
 
-## License
+## 授權
 
 MIT License
